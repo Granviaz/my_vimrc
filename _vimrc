@@ -13,10 +13,20 @@
 set nocompatible                "vi 호환성 무시. 방향키 사용. vundle 사용 시 필수.
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+
+call vundle#begin( ) "call vundle#begin ~ end 사이에 사용할 플러그인 추가
+"vundle사용을 위한 필수 플러그인 (삭제 불가)
 Plugin 'gmarik/Vundle.vim' "required
 Plugin 'tpope/vim-fugitive' "required
-call vundle#end()
+
+"내가 사용할 플러그인
+Plugin 'The-NERD-tree'
+Plugin 'taglist.vim'
+Plugin 'Source-Explorer-srcexpl.vim'
+call vundle#end( )
+".vimrc에 플러그인 추가, 파일저장 종료 후 vim 재실행"
+":PluginInstall 실행"
+
 filetype plugin indent on " Put your non-Plugin stuff after this line
 
 "-----------------------------------------
