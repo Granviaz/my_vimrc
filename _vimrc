@@ -22,7 +22,9 @@ Plugin 'tpope/vim-fugitive' "required
 "내가 사용할 플러그인
 Plugin 'The-NERD-tree'
 Plugin 'taglist.vim'
-Plugin 'Source-Explorer-srcexpl.vim'
+Plugin 'SrcExpl'
+Plugin 'Trinity'
+
 call vundle#end( )
 ".vimrc에 플러그인 추가, 파일저장 종료 후 vim 재실행"
 ":PluginInstall 실행"
@@ -120,7 +122,7 @@ let Tlist_Use_Right_Window = 1
 "----------------------------------------------
 " 5. Source Explorer environment configuration
 "----------------------------------------------
-nmap <F8> :SrcEXplToggle<CR>     "SrcExpl toggling key = F8
+nmap <F8> :SrcExplToggle<CR>     "SrcExpl toggling key = F8
 
 "윈도우 간 이동키 설정
 nmap <C-H> <C-W>h                "왼쪽 창으로 이동
@@ -141,3 +143,18 @@ let g:SrcExpl_isUpdateTags = 0   "Tag file update off
 "----------------------------------------------
 let NERDTreeWinPos = "left"      "NERD Tree 위치는 왼쪽
 nmap <F9> :NERDTreeToggle<CR>    "NERD Tree toggling key = F9
+
+"----------------------------------------------
+" 7. Trinity environment configuration
+"----------------------------------------------
+" Open and close all the three plugins on the same time
+nmap <F10>  :TrinityToggleAll<CR>
+
+" Open and close the Source Explorer separately
+"nmap <F9>  :TrinityToggleSourceExplorer<CR>
+
+" Open and close the Taglist separately
+"nmap <F10> :TrinityToggleTagList<CR>
+
+" Open and close the NERD Tree separately
+"nmap <F11> :TrinityToggleNERDTree<CR>
