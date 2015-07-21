@@ -65,6 +65,7 @@ set en=UTF-8
 set fileencodings=UTF-8
 
 "Miscellaneas
+set mouse=a                      "mouse로 visual mode 사용, 즉 커서 이동, 창 사이 이동
 set nobackup                     "no backup file
 set autowrite                    "next나 make 며령 시 자동저장
 set bs=indent,eol,start          "backspace키 줄처음에 위치한 경우 상위줄과 합침
